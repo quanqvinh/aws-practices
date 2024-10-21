@@ -5,6 +5,7 @@
   "repository": "https://github.com/quanqvinh/aws-practices.git",
   "license": "MIT",
   "author": "quanqvinh <nguyenquanqvinh@gmail.com>",
+  "type": "module",
   "main": "index.js",
   "bin": {
     "aws-practices": "bin/aws-practices.js"
@@ -12,6 +13,8 @@
   "scripts": {
     "build": "tsc",
     "cdk": "cdk",
+    "commit": "git-cz",
+    "commitlint": "commitlint --edit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepare": "node .husky/install.mjs",
@@ -24,6 +27,11 @@
     "*.{js,mjs,cjs,ts,tsx}": "prettier --write --list-different --ignore-unknown",
     "package.json": "npx sort-package-json"
   },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
   "dependencies": {
     "aws-cdk-lib": "2.162.1",
     "constructs": "^10.0.0",
@@ -31,10 +39,14 @@
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/cz-commitlint": "^19.5.0",
     "@eslint/js": "^9.13.0",
     "@types/jest": "^29.5.12",
     "@types/node": "22.5.4",
     "aws-cdk": "2.162.1",
+    "commitizen": "^4.3.1",
     "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-cdk": "^1.8.0",
