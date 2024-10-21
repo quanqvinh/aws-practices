@@ -13,4 +13,3 @@ new AwsPracticesStack(app, 'AwsPracticesStack', {
     region: process.env.AWS_REGION,
   },
 })
-
