@@ -1,0 +1,60 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "StsAccess",
+            "Effect": "Allow",
+            "Action": [
+                "sts:AssumeRole",
+                "iam:*Role*"
+            ],
+            "Resource": [
+                "arn:aws:iam::380799210638:role/cdk-*"
+            ]
+        },
+        {
+            "Action": [
+                "cloudformation:*"
+            ],
+            "Resource": [
+                "arn:aws:cloudformation:ap-southeast-1:380799210638:stack/CDKToolkit/*"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Sid": "S3Access",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "ECRAccess",
+            "Effect": "Allow",
+            "Action": [
+                "ecr:SetRepositoryPolicy",
+                "ecr:GetLifecyclePolicy",
+                "ecr:PutImageScanningConfiguration",
+                "ecr:DescribeRepositories",
+                "ecr:CreateRepository",
+                "ecr:DeleteRepository",
+                "ecr:PutLifecyclePolicy"
+            ],
+            "Resource": [
+                "arn:aws:ecr:ap-southeast-1:380799210638:repository/cdk-*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ssm:GetParameter*",
+                "ssm:PutParameter*",
+                "ssm:DeleteParameter*"
+            ],
+            "Resource": "arn:aws:ssm:ap-southeast-1:380799210638:parameter/cdk-bootstrap/*"
+        }
+    ]
+}
