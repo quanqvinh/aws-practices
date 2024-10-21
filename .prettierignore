@@ -4,9 +4,9 @@ dist
 coverage
 *.js
 jest.config.js
-*.d.ts
 *.json
 node_modules
 *.md
 .prettierrc
 .editorconfig
+.vscode

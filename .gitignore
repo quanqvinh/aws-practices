@@ -9,3 +9,4 @@ cdk.out
 .env
 dist
 credentials.csv
+.vscode/settings.json
