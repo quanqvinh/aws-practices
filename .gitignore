@@ -1,5 +1,4 @@
 !jest.config.js
-*.d.ts
 node_modules
 
 # CDK asset staging directory
@@ -7,6 +6,6 @@ node_modules
 cdk.out
 .env
 dist
-credentials.csv
+credentials
 .vscode/settings.json
 .eslintcache

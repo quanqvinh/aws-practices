@@ -5,7 +5,6 @@
   "repository": "https://github.com/quanqvinh/aws-practices.git",
   "license": "MIT",
   "author": "quanqvinh <nguyenquanqvinh@gmail.com>",
-  "type": "module",
   "main": "index.js",
   "bin": {
     "aws-practices": "bin/aws-practices.js"
