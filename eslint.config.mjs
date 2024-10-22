@@ -37,6 +37,14 @@ export default [
     rules: {
       ...prettierConfig.rules,
       'prettier/prettier': 'error',
+      'no-unused-vars': [
+        'warn',
+        { varsIgnorePattern: '^_', argsIgnorePattern: '^_' },
+      ],
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { varsIgnorePattern: '^_', argsIgnorePattern: '^_' },
+      ],
       'cdk/ban-lambda-runtimes': [
         'error',
         {
